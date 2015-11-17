@@ -17,7 +17,7 @@
     require_once 'class/Client.php';
 
     $order = isset($_GET['order']) ? $_GET['order'] : 'asc';
-    $index = @$_GET['index'];
+    $index = filter_input(INPUT_GET, 'index');
 
     $clients = [];
     $clients[] = new Client('Munir Ahmed', '123.456.789-00', '12.345.678-9', 'Rua das Alamedas, 762', '(12) 1234-5678');
